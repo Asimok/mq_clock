@@ -1,0 +1,197 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'FENPIN:U1|DATA'
+Slack : -4.899
+TNS   : -74.773
+
+Type  : Slow Model Setup 'CLKK'
+Slack : -4.833
+TNS   : -144.871
+
+Type  : Slow Model Setup 'SETTIME:U2|SEC1[1]'
+Slack : -1.040
+TNS   : -6.184
+
+Type  : Slow Model Setup 'SETTIME:U2|MIN1[1]'
+Slack : -0.921
+TNS   : -3.674
+
+Type  : Slow Model Setup 'SETTIME:U2|HOUR1[1]'
+Slack : -0.821
+TNS   : -4.589
+
+Type  : Slow Model Setup 'SETTIME:U2|MIN2[1]'
+Slack : -0.523
+TNS   : -1.895
+
+Type  : Slow Model Setup 'SETTIME:U2|SEC2[1]'
+Slack : -0.203
+TNS   : -0.953
+
+Type  : Slow Model Setup 'SETTIME:U2|HOUR2[0]'
+Slack : 0.837
+TNS   : 0.000
+
+Type  : Slow Model Hold 'FENPIN:U1|DATA'
+Slack : -3.091
+TNS   : -24.541
+
+Type  : Slow Model Hold 'SETTIME:U2|HOUR1[1]'
+Slack : -2.858
+TNS   : -19.014
+
+Type  : Slow Model Hold 'SETTIME:U2|MIN1[1]'
+Slack : -2.857
+TNS   : -18.556
+
+Type  : Slow Model Hold 'SETTIME:U2|MIN2[1]'
+Slack : -2.824
+TNS   : -13.515
+
+Type  : Slow Model Hold 'SETTIME:U2|HOUR2[0]'
+Slack : -2.672
+TNS   : -6.740
+
+Type  : Slow Model Hold 'SETTIME:U2|SEC1[1]'
+Slack : -2.613
+TNS   : -17.577
+
+Type  : Slow Model Hold 'SETTIME:U2|SEC2[1]'
+Slack : -2.536
+TNS   : -12.828
+
+Type  : Slow Model Hold 'CLKK'
+Slack : -1.431
+TNS   : -1.431
+
+Type  : Slow Model Minimum Pulse Width 'CLKK'
+Slack : -1.380
+TNS   : -54.380
+
+Type  : Slow Model Minimum Pulse Width 'FENPIN:U1|DATA'
+Slack : -0.500
+TNS   : -24.000
+
+Type  : Slow Model Minimum Pulse Width 'SETTIME:U2|HOUR1[1]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'SETTIME:U2|HOUR2[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'SETTIME:U2|MIN1[1]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'SETTIME:U2|MIN2[1]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'SETTIME:U2|SEC1[1]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'SETTIME:U2|SEC2[1]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'FENPIN:U1|DATA'
+Slack : -2.076
+TNS   : -26.643
+
+Type  : Fast Model Setup 'CLKK'
+Slack : -1.845
+TNS   : -42.338
+
+Type  : Fast Model Setup 'SETTIME:U2|SEC1[1]'
+Slack : -0.002
+TNS   : -0.002
+
+Type  : Fast Model Setup 'SETTIME:U2|MIN1[1]'
+Slack : 0.011
+TNS   : 0.000
+
+Type  : Fast Model Setup 'SETTIME:U2|HOUR1[1]'
+Slack : 0.030
+TNS   : 0.000
+
+Type  : Fast Model Setup 'SETTIME:U2|MIN2[1]'
+Slack : 0.223
+TNS   : 0.000
+
+Type  : Fast Model Setup 'SETTIME:U2|SEC2[1]'
+Slack : 0.369
+TNS   : 0.000
+
+Type  : Fast Model Setup 'SETTIME:U2|HOUR2[0]'
+Slack : 1.138
+TNS   : 0.000
+
+Type  : Fast Model Hold 'FENPIN:U1|DATA'
+Slack : -1.819
+TNS   : -16.918
+
+Type  : Fast Model Hold 'SETTIME:U2|MIN1[1]'
+Slack : -1.608
+TNS   : -10.698
+
+Type  : Fast Model Hold 'SETTIME:U2|MIN2[1]'
+Slack : -1.598
+TNS   : -7.835
+
+Type  : Fast Model Hold 'SETTIME:U2|HOUR1[1]'
+Slack : -1.583
+TNS   : -10.621
+
+Type  : Fast Model Hold 'SETTIME:U2|SEC1[1]'
+Slack : -1.549
+TNS   : -10.476
+
+Type  : Fast Model Hold 'SETTIME:U2|HOUR2[0]'
+Slack : -1.508
+TNS   : -3.992
+
+Type  : Fast Model Hold 'SETTIME:U2|SEC2[1]'
+Slack : -1.486
+TNS   : -7.533
+
+Type  : Fast Model Hold 'CLKK'
+Slack : -1.137
+TNS   : -1.137
+
+Type  : Fast Model Minimum Pulse Width 'CLKK'
+Slack : -1.380
+TNS   : -54.380
+
+Type  : Fast Model Minimum Pulse Width 'FENPIN:U1|DATA'
+Slack : -0.500
+TNS   : -24.000
+
+Type  : Fast Model Minimum Pulse Width 'SETTIME:U2|HOUR1[1]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'SETTIME:U2|HOUR2[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'SETTIME:U2|MIN1[1]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'SETTIME:U2|MIN2[1]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'SETTIME:U2|SEC1[1]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'SETTIME:U2|SEC2[1]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

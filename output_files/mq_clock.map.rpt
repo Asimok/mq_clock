@@ -1,0 +1,513 @@
+Analysis & Synthesis report for mq_clock
+Tue May 28 16:29:07 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue May 28 16:29:07 2019            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; mq_clock                                         ;
+; Top-level Entity Name              ; mq_clock_top                                     ;
+; Family                             ; Cyclone II                                       ;
+; Total logic elements               ; 258                                              ;
+;     Total combinational functions  ; 258                                              ;
+;     Dedicated logic registers      ; 77                                               ;
+; Total registers                    ; 77                                               ;
+; Total pins                         ; 68                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; mq_clock_top       ; mq_clock           ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
+; mq_clock_top.vhd                 ; yes             ; User VHDL File  ; E:/quartus_project/mq_clock/mq_clock_top.vhd       ;         ;
+; mq_clock_paomadeng.vhd           ; yes             ; User VHDL File  ; E:/quartus_project/mq_clock/mq_clock_paomadeng.vhd ;         ;
+; mq_clock_fenpin.vhd              ; yes             ; User VHDL File  ; E:/quartus_project/mq_clock/mq_clock_fenpin.vhd    ;         ;
+; mq_clock_led.vhd                 ; yes             ; User VHDL File  ; E:/quartus_project/mq_clock/mq_clock_led.vhd       ;         ;
+; mq_clock_settime.vhd             ; yes             ; User VHDL File  ; E:/quartus_project/mq_clock/mq_clock_settime.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 258   ;
+;                                             ;       ;
+; Total combinational functions               ; 258   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 101   ;
+;     -- 3 input functions                    ; 77    ;
+;     -- <=2 input functions                  ; 80    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 210   ;
+;     -- arithmetic mode                      ; 48    ;
+;                                             ;       ;
+; Total registers                             ; 77    ;
+;     -- Dedicated logic registers            ; 77    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 68    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; CLKK  ;
+; Maximum fan-out                             ; 53    ;
+; Total fan-out                               ; 1035  ;
+; Average fan-out                             ; 2.57  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
+; |mq_clock_top              ; 258 (0)           ; 77 (0)       ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |mq_clock_top              ; work         ;
+;    |FENPIN:U1|             ; 132 (132)         ; 53 (53)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mq_clock_top|FENPIN:U1    ; work         ;
+;    |LED:U3|                ; 77 (77)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mq_clock_top|LED:U3       ; work         ;
+;    |SETTIME:U2|            ; 47 (47)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mq_clock_top|SETTIME:U2   ; work         ;
+;    |ZOUMADENG:U4|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mq_clock_top|ZOUMADENG:U4 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; LED:U3|LEDH2[0]                                     ; LED:U3|Mux45        ; yes                    ;
+; LED:U3|LEDH2[2]                                     ; LED:U3|Mux45        ; yes                    ;
+; LED:U3|LEDH2[3]                                     ; LED:U3|Mux45        ; yes                    ;
+; LED:U3|LEDH2[4]                                     ; LED:U3|Mux45        ; yes                    ;
+; LED:U3|LEDH2[5]                                     ; LED:U3|Mux45        ; yes                    ;
+; LED:U3|LEDH2[6]                                     ; LED:U3|Mux45        ; yes                    ;
+; LED:U3|LEDH1[0]                                     ; LED:U3|Mux39        ; yes                    ;
+; LED:U3|LEDH1[1]                                     ; LED:U3|Mux39        ; yes                    ;
+; LED:U3|LEDH1[2]                                     ; LED:U3|Mux39        ; yes                    ;
+; LED:U3|LEDH1[3]                                     ; LED:U3|Mux39        ; yes                    ;
+; LED:U3|LEDH1[4]                                     ; LED:U3|Mux39        ; yes                    ;
+; LED:U3|LEDH1[5]                                     ; LED:U3|Mux39        ; yes                    ;
+; LED:U3|LEDH1[6]                                     ; LED:U3|Mux39        ; yes                    ;
+; LED:U3|LEDM2[0]                                     ; LED:U3|Mux29        ; yes                    ;
+; LED:U3|LEDM2[1]                                     ; LED:U3|Mux29        ; yes                    ;
+; LED:U3|LEDM2[2]                                     ; LED:U3|Mux29        ; yes                    ;
+; LED:U3|LEDM2[3]                                     ; LED:U3|Mux29        ; yes                    ;
+; LED:U3|LEDM2[4]                                     ; LED:U3|Mux29        ; yes                    ;
+; LED:U3|LEDM2[5]                                     ; LED:U3|Mux29        ; yes                    ;
+; LED:U3|LEDM2[6]                                     ; LED:U3|Mux29        ; yes                    ;
+; LED:U3|LEDM1[0]                                     ; LED:U3|Mux23        ; yes                    ;
+; LED:U3|LEDM1[1]                                     ; LED:U3|Mux23        ; yes                    ;
+; LED:U3|LEDM1[2]                                     ; LED:U3|Mux23        ; yes                    ;
+; LED:U3|LEDM1[3]                                     ; LED:U3|Mux23        ; yes                    ;
+; LED:U3|LEDM1[4]                                     ; LED:U3|Mux23        ; yes                    ;
+; LED:U3|LEDM1[5]                                     ; LED:U3|Mux23        ; yes                    ;
+; LED:U3|LEDM1[6]                                     ; LED:U3|Mux23        ; yes                    ;
+; LED:U3|LEDS2[0]                                     ; LED:U3|Mux13        ; yes                    ;
+; LED:U3|LEDS2[1]                                     ; LED:U3|Mux13        ; yes                    ;
+; LED:U3|LEDS2[2]                                     ; LED:U3|Mux13        ; yes                    ;
+; LED:U3|LEDS2[3]                                     ; LED:U3|Mux13        ; yes                    ;
+; LED:U3|LEDS2[4]                                     ; LED:U3|Mux13        ; yes                    ;
+; LED:U3|LEDS2[5]                                     ; LED:U3|Mux13        ; yes                    ;
+; LED:U3|LEDS2[6]                                     ; LED:U3|Mux13        ; yes                    ;
+; LED:U3|LEDS1[0]                                     ; LED:U3|Mux7         ; yes                    ;
+; LED:U3|LEDS1[1]                                     ; LED:U3|Mux7         ; yes                    ;
+; LED:U3|LEDS1[2]                                     ; LED:U3|Mux7         ; yes                    ;
+; LED:U3|LEDS1[3]                                     ; LED:U3|Mux7         ; yes                    ;
+; LED:U3|LEDS1[4]                                     ; LED:U3|Mux7         ; yes                    ;
+; LED:U3|LEDS1[5]                                     ; LED:U3|Mux7         ; yes                    ;
+; LED:U3|LEDS1[6]                                     ; LED:U3|Mux7         ; yes                    ;
+; Number of user-specified and inferred latches = 41  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------+
+; Registers Removed During Synthesis                                  ;
++---------------------------------------+-----------------------------+
+; Register name                         ; Reason for Removal          ;
++---------------------------------------+-----------------------------+
+; FENPIN:U1|Q[0]                        ; Merged with FENPIN:U1|Q1[0] ;
+; FENPIN:U1|Q[1]                        ; Merged with FENPIN:U1|Q1[1] ;
+; Total Number of Removed Registers = 2 ;                             ;
++---------------------------------------+-----------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 77    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 24    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |mq_clock_top|FENPIN:U1|P[1]      ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |mq_clock_top|SETTIME:U2|MIN1[0]  ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |mq_clock_top|SETTIME:U2|MIN2[3]  ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |mq_clock_top|SETTIME:U2|HOUR2[1] ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |mq_clock_top|SETTIME:U2|HOUR1[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Tue May 28 16:28:54 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mq_clock -c mq_clock
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file mq_clock_top.vhd
+    Info (12022): Found design unit 1: mq_clock_top-FOUR
+    Info (12023): Found entity 1: mq_clock_top
+Info (12021): Found 2 design units, including 1 entities, in source file mq_clock_paomadeng.vhd
+    Info (12022): Found design unit 1: ZOUMADENG-one
+    Info (12023): Found entity 1: ZOUMADENG
+Info (12021): Found 2 design units, including 1 entities, in source file mq_clock_fenpin.vhd
+    Info (12022): Found design unit 1: FENPIN-one
+    Info (12023): Found entity 1: FENPIN
+Info (12021): Found 2 design units, including 1 entities, in source file mq_clock_led.vhd
+    Info (12022): Found design unit 1: LED-one
+    Info (12023): Found entity 1: LED
+Info (12021): Found 2 design units, including 1 entities, in source file mq_clock_settime.vhd
+    Info (12022): Found design unit 1: SETTIME-one
+    Info (12023): Found entity 1: SETTIME
+Info (12127): Elaborating entity "mq_clock_top" for the top level hierarchy
+Info (12128): Elaborating entity "FENPIN" for hierarchy "FENPIN:U1"
+Warning (10492): VHDL Process Statement warning at mq_clock_fenpin.vhd(25): signal "DATA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mq_clock_fenpin.vhd(38): signal "P" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "SETTIME" for hierarchy "SETTIME:U2"
+Warning (10492): VHDL Process Statement warning at mq_clock_settime.vhd(65): signal "MIN2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mq_clock_settime.vhd(65): signal "MIN1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mq_clock_settime.vhd(66): signal "SEC2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mq_clock_settime.vhd(66): signal "SEC1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "LED" for hierarchy "LED:U3"
+Warning (10631): VHDL Process Statement warning at mq_clock_led.vhd(11): inferring latch(es) for signal or variable "LEDH2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mq_clock_led.vhd(19): inferring latch(es) for signal or variable "LEDH1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mq_clock_led.vhd(34): inferring latch(es) for signal or variable "LEDM2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mq_clock_led.vhd(45): inferring latch(es) for signal or variable "LEDM1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mq_clock_led.vhd(60): inferring latch(es) for signal or variable "LEDS2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mq_clock_led.vhd(71): inferring latch(es) for signal or variable "LEDS1", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "LEDS1[0]" at mq_clock_led.vhd(71)
+Info (10041): Inferred latch for "LEDS1[1]" at mq_clock_led.vhd(71)
+Info (10041): Inferred latch for "LEDS1[2]" at mq_clock_led.vhd(71)
+Info (10041): Inferred latch for "LEDS1[3]" at mq_clock_led.vhd(71)
+Info (10041): Inferred latch for "LEDS1[4]" at mq_clock_led.vhd(71)
+Info (10041): Inferred latch for "LEDS1[5]" at mq_clock_led.vhd(71)
+Info (10041): Inferred latch for "LEDS1[6]" at mq_clock_led.vhd(71)
+Info (10041): Inferred latch for "LEDS2[0]" at mq_clock_led.vhd(60)
+Info (10041): Inferred latch for "LEDS2[1]" at mq_clock_led.vhd(60)
+Info (10041): Inferred latch for "LEDS2[2]" at mq_clock_led.vhd(60)
+Info (10041): Inferred latch for "LEDS2[3]" at mq_clock_led.vhd(60)
+Info (10041): Inferred latch for "LEDS2[4]" at mq_clock_led.vhd(60)
+Info (10041): Inferred latch for "LEDS2[5]" at mq_clock_led.vhd(60)
+Info (10041): Inferred latch for "LEDS2[6]" at mq_clock_led.vhd(60)
+Info (10041): Inferred latch for "LEDM1[0]" at mq_clock_led.vhd(45)
+Info (10041): Inferred latch for "LEDM1[1]" at mq_clock_led.vhd(45)
+Info (10041): Inferred latch for "LEDM1[2]" at mq_clock_led.vhd(45)
+Info (10041): Inferred latch for "LEDM1[3]" at mq_clock_led.vhd(45)
+Info (10041): Inferred latch for "LEDM1[4]" at mq_clock_led.vhd(45)
+Info (10041): Inferred latch for "LEDM1[5]" at mq_clock_led.vhd(45)
+Info (10041): Inferred latch for "LEDM1[6]" at mq_clock_led.vhd(45)
+Info (10041): Inferred latch for "LEDM2[0]" at mq_clock_led.vhd(34)
+Info (10041): Inferred latch for "LEDM2[1]" at mq_clock_led.vhd(34)
+Info (10041): Inferred latch for "LEDM2[2]" at mq_clock_led.vhd(34)
+Info (10041): Inferred latch for "LEDM2[3]" at mq_clock_led.vhd(34)
+Info (10041): Inferred latch for "LEDM2[4]" at mq_clock_led.vhd(34)
+Info (10041): Inferred latch for "LEDM2[5]" at mq_clock_led.vhd(34)
+Info (10041): Inferred latch for "LEDM2[6]" at mq_clock_led.vhd(34)
+Info (10041): Inferred latch for "LEDH1[0]" at mq_clock_led.vhd(19)
+Info (10041): Inferred latch for "LEDH1[1]" at mq_clock_led.vhd(19)
+Info (10041): Inferred latch for "LEDH1[2]" at mq_clock_led.vhd(19)
+Info (10041): Inferred latch for "LEDH1[3]" at mq_clock_led.vhd(19)
+Info (10041): Inferred latch for "LEDH1[4]" at mq_clock_led.vhd(19)
+Info (10041): Inferred latch for "LEDH1[5]" at mq_clock_led.vhd(19)
+Info (10041): Inferred latch for "LEDH1[6]" at mq_clock_led.vhd(19)
+Info (10041): Inferred latch for "LEDH2[0]" at mq_clock_led.vhd(11)
+Info (10041): Inferred latch for "LEDH2[1]" at mq_clock_led.vhd(11)
+Info (10041): Inferred latch for "LEDH2[2]" at mq_clock_led.vhd(11)
+Info (10041): Inferred latch for "LEDH2[3]" at mq_clock_led.vhd(11)
+Info (10041): Inferred latch for "LEDH2[4]" at mq_clock_led.vhd(11)
+Info (10041): Inferred latch for "LEDH2[5]" at mq_clock_led.vhd(11)
+Info (10041): Inferred latch for "LEDH2[6]" at mq_clock_led.vhd(11)
+Info (12128): Elaborating entity "ZOUMADENG" for hierarchy "ZOUMADENG:U4"
+Warning (10631): VHDL Process Statement warning at mq_clock_paomadeng.vhd(10): inferring latch(es) for signal or variable "LIGHT", which holds its previous value in one or more paths through the process
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "LED:U3|LEDH2[4]" merged with LATCH primitive "LED:U3|LEDH2[0]"
+    Info (13026): Duplicate LATCH primitive "LED:U3|LEDH2[3]" merged with LATCH primitive "LED:U3|LEDH2[0]"
+    Info (13026): Duplicate LATCH primitive "LED:U3|LEDM2[3]" merged with LATCH primitive "LED:U3|LEDM2[0]"
+    Info (13026): Duplicate LATCH primitive "LED:U3|LEDS2[3]" merged with LATCH primitive "LED:U3|LEDS2[0]"
+Warning (13012): Latch LED:U3|LEDH2[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|HOUR2[0]
+Warning (13012): Latch LED:U3|LEDH2[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|HOUR2[1]
+Warning (13012): Latch LED:U3|LEDH2[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|HOUR2[1]
+Warning (13012): Latch LED:U3|LEDH2[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|HOUR2[1]
+Warning (13012): Latch LED:U3|LEDH1[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|HOUR1[1]
+Warning (13012): Latch LED:U3|LEDH1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|HOUR1[2]
+Warning (13012): Latch LED:U3|LEDH1[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|HOUR1[2]
+Warning (13012): Latch LED:U3|LEDH1[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|HOUR1[1]
+Warning (13012): Latch LED:U3|LEDH1[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|HOUR1[2]
+Warning (13012): Latch LED:U3|LEDH1[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|HOUR1[1]
+Warning (13012): Latch LED:U3|LEDH1[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|HOUR1[1]
+Warning (13012): Latch LED:U3|LEDM2[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN2[1]
+Warning (13012): Latch LED:U3|LEDM2[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN2[2]
+Warning (13012): Latch LED:U3|LEDM2[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN2[1]
+Warning (13012): Latch LED:U3|LEDM2[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN2[2]
+Warning (13012): Latch LED:U3|LEDM2[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN2[1]
+Warning (13012): Latch LED:U3|LEDM2[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN2[2]
+Warning (13012): Latch LED:U3|LEDM1[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN1[1]
+Warning (13012): Latch LED:U3|LEDM1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN1[2]
+Warning (13012): Latch LED:U3|LEDM1[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN1[2]
+Warning (13012): Latch LED:U3|LEDM1[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN1[1]
+Warning (13012): Latch LED:U3|LEDM1[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN1[2]
+Warning (13012): Latch LED:U3|LEDM1[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN1[1]
+Warning (13012): Latch LED:U3|LEDM1[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|MIN1[1]
+Warning (13012): Latch LED:U3|LEDS2[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC2[1]
+Warning (13012): Latch LED:U3|LEDS2[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC2[2]
+Warning (13012): Latch LED:U3|LEDS2[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC2[1]
+Warning (13012): Latch LED:U3|LEDS2[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC2[2]
+Warning (13012): Latch LED:U3|LEDS2[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC2[1]
+Warning (13012): Latch LED:U3|LEDS2[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC2[2]
+Warning (13012): Latch LED:U3|LEDS1[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC1[1]
+Warning (13012): Latch LED:U3|LEDS1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC1[2]
+Warning (13012): Latch LED:U3|LEDS1[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC1[2]
+Warning (13012): Latch LED:U3|LEDS1[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC1[1]
+Warning (13012): Latch LED:U3|LEDS1[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC1[2]
+Warning (13012): Latch LED:U3|LEDS1[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC1[1]
+Warning (13012): Latch LED:U3|LEDS1[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SETTIME:U2|SEC1[1]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED2H[1]" is stuck at GND
+    Warning (13410): Pin "led2z[0]" is stuck at VCC
+    Warning (13410): Pin "led2z[1]" is stuck at VCC
+    Warning (13410): Pin "led2z[2]" is stuck at VCC
+    Warning (13410): Pin "led2z[3]" is stuck at VCC
+    Warning (13410): Pin "led2z[4]" is stuck at VCC
+    Warning (13410): Pin "led2z[5]" is stuck at VCC
+    Warning (13410): Pin "led2z[6]" is stuck at VCC
+    Warning (13410): Pin "led2c[0]" is stuck at VCC
+    Warning (13410): Pin "led2c[1]" is stuck at VCC
+    Warning (13410): Pin "led2c[2]" is stuck at VCC
+    Warning (13410): Pin "led2c[3]" is stuck at VCC
+    Warning (13410): Pin "led2c[4]" is stuck at VCC
+    Warning (13410): Pin "led2c[5]" is stuck at VCC
+    Warning (13410): Pin "led2c[6]" is stuck at VCC
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 326 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 258 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 103 warnings
+    Info: Peak virtual memory: 4669 megabytes
+    Info: Processing ended: Tue May 28 16:29:07 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:10
+
+
